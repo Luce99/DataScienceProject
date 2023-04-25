@@ -1,11 +1,17 @@
 import pandas as pd
+import os
 from components.sampledf.functions import *
 
-
 #import dataframes
-df_mun = pd.read_excel('data/dfsample/speciesByMunicipality.xlsx', engine='openpyxl')
-df_consolidated = pd.read_excel('data/dfsample/consolidatedTableByYear.xlsx', engine='openpyxl')
-df_eb = pd.read_excel('data/dfsample/ebdSummaryVisits.xlsx', engine='openpyxl')
+ruta_absoluta = os.path.abspath('data/dfsample/speciesByMunicipality.xlsx')
+df_mun = pd.read_excel(ruta_absoluta, engine='openpyxl')
+
+ruta_abs = os.path.abspath('data/dfsample/consolidatedTableByYear.xlsx')
+df_consolidated = pd.read_excel(ruta_abs, engine='openpyxl')
+
+ruta_absPath = os.path.abspath('data/dfsample/ebdSummaryVisits.xlsx')
+df_eb = pd.read_excel(ruta_absPath, engine='openpyxl')
+
 clusters = pd.read_excel('data/dfsample/Clusters.xlsx', engine='openpyxl')
 
 #We update the dataframes to make some new we will use
