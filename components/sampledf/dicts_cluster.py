@@ -1,7 +1,7 @@
 import pandas as pd
-df = pd.read_csv('data\dfsample\ClustersCSV.csv')
+df = pd.read_excel('data\dfsample\Clusters.xlsx', engine='openpyxl')
 def list_generator(df: pd.DataFrame, col: str) -> list:
-    max_val = df[col].max()
+    max_val = int(df[col].max())
     list_of_lists = []
     for j in range(0, max_val+1):
         list_0 = [i for i in list(df[df[col] == j]['NOM_DPTO'].unique())]
