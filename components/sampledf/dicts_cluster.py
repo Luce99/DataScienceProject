@@ -1,5 +1,8 @@
 import pandas as pd
-df = pd.read_excel('data/dfsample/Clusters.xlsx', engine='openpyxl')
+import os
+
+ruta_absoluta = os.path.abspath('data/dfsample/Clusters.xlsx')
+df = pd.read_excel(ruta_absoluta, engine='openpyxl')
 def list_generator(df: pd.DataFrame, col: str) -> list:
     max_val = int(df[col].max())
     list_of_lists = []
