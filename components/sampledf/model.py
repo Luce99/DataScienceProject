@@ -3,10 +3,10 @@ from components.sampledf.functions import *
 
 
 #import dataframes
-df_mun = pd.read_excel('data\dfsample\speciesByMunicipality.xlsx', engine='openpyxl')
-df_consolidated = pd.read_excel('data\dfsample\consolidatedTableByYear.xlsx', engine='openpyxl')
-df_eb = pd.read_excel('data\dfsample\ebdSummaryVisits.xlsx', engine='openpyxl')
-clusters = pd.read_csv('data\dfsample\ClustersCSV.csv')
+df_mun = pd.read_excel('\data\dfsample\speciesByMunicipality.xlsx', engine='openpyxl')
+df_consolidated = pd.read_excel('\data\dfsample\consolidatedTableByYear.xlsx', engine='openpyxl')
+df_eb = pd.read_excel('\data\dfsample\ebdSummaryVisits.xlsx', engine='openpyxl')
+clusters = pd.read_csv('\data\dfsample\ClustersCSV.csv')
 
 #We update the dataframes to make some new we will use
 
