@@ -1,18 +1,12 @@
 import pandas as pd
 from components.sampledf.functions import *
-import os
+
 
 #import dataframes
-
-
-ruta = os.path.join('data', 'dfsample', 'species_by_municipality.xlsx')
-df_mun = pd.read_excel(ruta, engine='openpyxl')
-rutaCon = os.path.join('data', 'dfsample', 'consolidated_table_byyear.xlsx')
-df_consolidated = pd.read_excel(rutaCon, engine='openpyxl')
-rutaSummary = os.path.join('data', 'dfsample', 'ebd_summary_visits.xlsx')
-df_eb = pd.read_excel(rutaSummary, engine='openpyxl')
-rutaClusters = os.path.join('data', 'dfsample', 'Clusters_CSV.csv')
-clusters = pd.read_csv(rutaClusters)
+df_mun = pd.read_excel('data\dfsample\speciesByMunicipality.xlsx', engine='openpyxl')
+df_consolidated = pd.read_excel('data\dfsample\consolidatedTableByYear.xlsx', engine='openpyxl')
+df_eb = pd.read_excel('data\dfsample\ebdSummaryVisits.xlsx', engine='openpyxl')
+clusters = pd.read_csv('data\dfsample\ClustersCSV.csv')
 
 #We update the dataframes to make some new we will use
 
