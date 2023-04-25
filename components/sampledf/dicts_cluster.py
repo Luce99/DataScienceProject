@@ -1,5 +1,5 @@
 import pandas as pd
-df = pd.read_csv('data\dfsample\Clusters_CSV.csv')
+df = pd.read_csv('data\dfsample\ClustersCSV.csv')
 def list_generator(df: pd.DataFrame, col: str) -> list:
     max_val = df[col].max()
     list_of_lists = []
