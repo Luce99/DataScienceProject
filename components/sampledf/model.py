@@ -12,7 +12,8 @@ df_consolidated = pd.read_excel(ruta_abs, engine='openpyxl')
 ruta_absPath = os.path.abspath('data/dfsample/ebdSummaryVisits.xlsx')
 df_eb = pd.read_excel(ruta_absPath, engine='openpyxl')
 
-clusters = pd.read_excel('data/dfsample/Clusters.xlsx', engine='openpyxl')
+ruta_absCluster = os.path.abspath('data/dfsample/Clusters.xlsx')
+clusters = pd.read_excel(ruta_absCluster, engine='openpyxl')
 
 #We update the dataframes to make some new we will use
 
