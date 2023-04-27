@@ -15,7 +15,7 @@ df_eb = pd.read_excel(ruta_absPath, engine='openpyxl')
 ruta_absCluster = os.path.abspath('data/dfsample/Clusters.xlsx')
 clusters = pd.read_excel(ruta_absCluster, engine='openpyxl')
 
-#We update the dataframes to make some new we will use
+#Updatin the dataframes to make some new that will be useful
 
 #creating a dataframe with latitude and longitude
 coordinates= clusters[['LONGITUDE','LATITUDE','NOM_MPIO']]
@@ -24,7 +24,7 @@ df_lat_lon= pd.merge(df_mun, coordinates, how="right", on="NOM_MPIO")
 
 
 
-#We sum the observations per department
+# Observations per department
 df_visitors = df_eb.merge(df_mun, how='left', on='NOM_MPIO')
 df_eb_new = df_visitors.groupby('NOM_DPTO')['visitors'].sum()
 df_copy3 = pd.DataFrame(df_eb_new).reset_index()
