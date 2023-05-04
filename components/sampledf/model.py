@@ -15,7 +15,7 @@ df_eb = pd.read_excel(ruta_absPath, engine='openpyxl')
 ruta_absCluster = os.path.abspath('data/dfsample/Clusters.xlsx')
 clusters = pd.read_excel(ruta_absCluster, engine='openpyxl')
 
-#Updatin the dataframes to make some new that will be useful
+#Updating the dataframes to make some new that will be useful
 
 #creating a dataframe with latitude and longitude
 coordinates= clusters[['LONGITUDE','LATITUDE','NOM_MPIO']]
